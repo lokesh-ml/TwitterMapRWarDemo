@@ -18,7 +18,7 @@
 		<spark.version>1.6.1</spark.version>
 		<mapr.version>1.1.1-mapr-1602-m7-5.2.0</mapr.version>
 		<maven-scala-plugin.version>2.15.2</maven-scala-plugin.version>
-		<jdk.tools.path>C:/Program Files/Java/jdk1.8.0_60/lib/tools.jar</jdk.tools.path>
+		<jdk.tools.path>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.141-2.b16.el7_4.x86_64/lib/tools.jar</jdk.tools.path>
 	</properties>
 	
 	<repositories>
