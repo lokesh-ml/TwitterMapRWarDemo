@@ -19,6 +19,7 @@
 		<mapr.version>1.1.1-mapr-1602-m7-5.2.0</mapr.version>
 		<maven-scala-plugin.version>2.15.2</maven-scala-plugin.version>
 		<jdk.tools.path>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.141-2.b16.el7_4.x86_64/lib/tools.jar</jdk.tools.path>
+		<docker.registry>https://51.141.26.48:8443/repository/docker-private/</docker.registry>
 	</properties>
 	
 	<repositories>
@@ -158,7 +159,7 @@
 						</goals>
 						<configuration>
 							<dockerDirectory>${project.basedir}</dockerDirectory>
-							<imageName>https://51.141.26.48:8443/repository/docker-private/TwitterMapRWarDemo-image:${project.version}</imageName>
+							<imageName>${docker.registry}TwitterMapRWarDemo-image:${project.version}</imageName>
 							<resources>
 								<resource>
 									<targetPath>/</targetPath>
@@ -177,7 +178,7 @@
 						</goals>
 						<configuration>
 							<image>TwitterMapRWarDemo-image:${project.version}</image>
-							<newName>51.141.26.48:8443/repository/docker-private/TwitterMapRWarDemo-image:${project.version}</newName>
+							<newName>${docker.registry}TwitterMapRWarDemo-image:${project.version}</newName>
 						</configuration>
 					</execution>
 					
@@ -188,7 +189,7 @@
 							<goal>push</goal>
 						</goals>
 						<configuration>
-							<imageName>51.141.26.48:8443/repository/docker-private/TwitterMapRWarDemo-image:${project.version}</imageName>
+							<imageName>${docker.registry}TwitterMapRWarDemo-image:${project.version}</imageName>
 						</configuration>
 					</execution>        
 				</executions>
