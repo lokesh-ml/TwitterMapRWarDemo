@@ -157,7 +157,15 @@
 							<goal>build</goal>
 						</goals>
 						<configuration>
+							<imageName>TwitterMapRWarDemo-image</imageName>
 							<dockerDirectory>docker</dockerDirectory>
+							<resources>
+								<resource>
+									<targetPath>/</targetPath>
+									<directory>${project.build.directory}</directory>
+									<include>${project.build.finalName}.war</include>
+								</resource>
+							</resources>
 						</configuration>	
 					</execution>
 					
