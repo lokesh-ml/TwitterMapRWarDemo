@@ -145,6 +145,41 @@
 				<version>2.1.1</version>
 			</plugin>
 			
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<id>build-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>tag-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>tag</goal>
+						</goals>
+						<configuration>
+							<image>TwitterMapRWarDemo-image:${project.version}</image>
+							<newName>https://51.141.26.48:8443/repository/docker-private/TwitterMapRWarDemo-image:${project.version}</newName>
+						</configuration>
+					</execution>
+					<execution>
+						<id>push-image</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>push</goal>
+						</goals>
+						<configuration>
+							<imageName>https://51.141.26.48:8443/repository/docker-private/TwitterMapRWarDemo-image:${project.version}</imageName>
+						</configuration>
+					</execution>        
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	
@@ -157,7 +192,7 @@
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>Snapshots</name>
-			<url>http://51.141.26.48:8081/repository/maven-snapshots</url>
+			<url>https://51.141.26.48:8443/repository/maven-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
