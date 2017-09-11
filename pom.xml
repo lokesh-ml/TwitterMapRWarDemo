@@ -159,7 +159,7 @@
 						</goals>
 						<configuration>
 							<dockerDirectory>${project.basedir}</dockerDirectory>
-							<imageName>${docker.registry}TwitterMapRWarDemo-image:${project.version}</imageName>
+							<imageName>${docker.registry}twittermaprwardemo-image:${project.version}</imageName>
 							<resources>
 								<resource>
 									<targetPath>/</targetPath>
@@ -178,7 +178,7 @@
 						</goals>
 						<configuration>
 							<image>TwitterMapRWarDemo-image:${project.version}</image>
-							<newName>${docker.registry}TwitterMapRWarDemo-image:${project.version}</newName>
+							<newName>${docker.registry}twittermaprwardemo-image:${project.version}</newName>
 						</configuration>
 					</execution>
 					
@@ -189,7 +189,7 @@
 							<goal>push</goal>
 						</goals>
 						<configuration>
-							<imageName>${docker.registry}TwitterMapRWarDemo-image:${project.version}</imageName>
+							<imageName>${docker.registry}twittermaprwardemo-image:${project.version}</imageName>
 						</configuration>
 					</execution>        
 				</executions>
