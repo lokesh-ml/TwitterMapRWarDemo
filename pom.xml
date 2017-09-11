@@ -159,10 +159,10 @@
 			<name>Snapshots</name>
 			<url>http://51.141.26.48:8081/repository/maven-snapshots</url>
 		</snapshotRepository>
-		<snapshotRepository>
+		<dockerRepository>
 			<id>nexus</id>
 			<name>Docker</name>
 			<url>https://51.141.26.48:8443/repository/docker-private/</url>
-		</snapshotRepository>
+		</dockerRepository>
 	</distributionManagement>
 </project>
