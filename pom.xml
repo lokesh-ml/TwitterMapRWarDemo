@@ -157,7 +157,7 @@
 							<goal>build</goal>
 						</goals>
 						<configuration>
-							<dockerDirectory>${project.build.directory}/classes</dockerDirectory>
+							<dockerDirectory>${project.build.directory}</dockerDirectory>
 							<imageName>https://51.141.26.48:8443/repository/docker-private/TwitterMapRWarDemo-image:${project.version}</imageName>
 							<resources>
 								<resource>
