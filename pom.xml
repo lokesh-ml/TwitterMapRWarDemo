@@ -152,7 +152,17 @@
 		<repository>
 			<id>nexus</id>
 			<name>Releases</name>
-			<url>http://51.141.26.48:8081/repository/maven-releases</url>
+			<url>https://51.141.26.48:8443/repository/maven-releases</url>
 		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshots</name>
+			<url>http://51.141.26.48:8081/repository/maven-snapshots</url>
+		</snapshotRepository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Docker</name>
+			<url>https://51.141.26.48:8443/repository/docker-private/</url>
+		</snapshotRepository>
 	</distributionManagement>
 </project>
