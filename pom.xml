@@ -156,7 +156,11 @@
 						<goals>
 							<goal>build</goal>
 						</goals>
+						<configuration>
+							<dockerDirectory>docker</dockerDirectory>
+						</configuration>	
 					</execution>
+					
 					<execution>
 						<id>tag-image</id>
 						<phase>package</phase>
@@ -168,6 +172,7 @@
 							<newName>https://51.141.26.48:8443/repository/docker-private/TwitterMapRWarDemo-image:${project.version}</newName>
 						</configuration>
 					</execution>
+					
 					<execution>
 						<id>push-image</id>
 						<phase>deploy</phase>
